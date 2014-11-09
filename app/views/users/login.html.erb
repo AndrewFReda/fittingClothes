@@ -1,0 +1,8 @@
+<h2> USERS#LOGIN </h2>
+
+<h4> Login </h4>
+<%= simple_form_for @user, url: url_for(controller: :users, action: :login_user) do |f| %>
+  <%= f.input :email, placeholder: 'user@domain.com', input_html: { maxlength: 20 } %>
+  <%= f.input :password %>
+  <%= f.button :submit, 'Login' %>
+<% end %>

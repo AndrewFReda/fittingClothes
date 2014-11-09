@@ -1,0 +1,11 @@
+<h2> USERS#NEW </h2>
+
+<h4> Create an Account </h4>
+<%= simple_form_for @user do |f| %>
+  <%= f.input :email, placeholder: 'user@domain.com', input_html: { maxlength: 20 } %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Already a member?", login_user_path %>
