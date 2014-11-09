@@ -1,6 +1,6 @@
-<h2> USERS#SHOW </h2>
+<h2> User lobby </h2>
 
-<%= button_to 'Enter Measurements', new_user_path %>
-<%= button_to 'Upload Picture', new_user_path %>
-<%= button_to 'View My Clothing', users_path %>
+<%= link_to 'Enter Measurements', new_shirt_path, class: 'button' %>
+<%= link_to 'Upload a picture', new_shirt_path, class: 'button' %>
+<%= link_to 'View My Clothing', shirts_path, class: 'button' %>
 <%= button_to 'Sign Out', @user, method: :delete %>
