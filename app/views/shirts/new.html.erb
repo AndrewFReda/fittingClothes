@@ -1,0 +1,9 @@
+<h2> Add a new shirt. </h2>
+
+<%= simple_form_for @shirt do |f| %>
+  <%= f.input :name %>
+  <%= f.input :length, as: :string %>
+  <%= f.input :chest, as: :string %>
+  <%= f.input :sleeve, as: :string %>
+  <%= f.button :submit %>
+<% end %>
