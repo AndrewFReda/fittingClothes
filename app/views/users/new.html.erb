@@ -1,6 +1,5 @@
-<h2> USERS#NEW </h2>
+<h2> Create an account </h2>
 
-<h4> Create an Account </h4>
 <%= simple_form_for @user do |f| %>
   <%= f.input :email, placeholder: 'user@domain.com', input_html: { maxlength: 20 } %>
   <%= f.input :password %>

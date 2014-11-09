@@ -1,0 +1,18 @@
+<h2> View all of your shirts. </h2>
+
+<table>
+  <% @shirts.each do |shirt| %>
+    <tr>
+      <td> <%= link_to shirt.name, shirt_path(id: shirt.id) %> </td>
+      <td> <%= link_to "Edit", edit_shirt_path(shirt), class: 'button' %> </td>
+      <td> <%= link_to "Delete", shirt, method: :delete, class: 'button' %> </td>
+    </tr>
+  <% end %>
+
+
+  <% if @shirts.empty? %>
+    <tr>
+      <em> You have no added any shirts yet! Add a new shirt <%= link_to "here", new_shirt_path %>.</em>
+    </tr>
+  <% end %>
+</table>

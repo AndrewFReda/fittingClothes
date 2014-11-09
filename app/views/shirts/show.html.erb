@@ -1,0 +1,34 @@
+<h2> View your shirt's measurements. </h2>
+
+<table>
+  <tr>
+    <td>
+    Name: <%= @shirt.name %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Length: <%= @shirt.length %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Chest: <%= @shirt.chest %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Sleeve: <%= @shirt.sleeve %>
+    </td>
+  </tr>
+
+  <tr>
+    <td> <%= link_to "Edit", edit_shirt_path(@shirt), class: 'button' %> </td>
+    <td> <%= link_to "Delete", @shirt, method: :delete, class: 'button' %> </td>
+  </tr>
+
+</table>
+

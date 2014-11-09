@@ -1,0 +1,11 @@
+<h2> Change your shirt's measurements. </h2>
+
+<%= simple_form_for @shirt do |f| %>
+  <%= f.input :name %>
+  <%= f.input :length %>
+  <%= f.input :chest %>
+  <%= f.input :sleeve %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Delete Shirt", @shirt, method: :delete, class: 'button' %>
