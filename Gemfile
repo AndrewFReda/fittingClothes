@@ -13,10 +13,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-# gem 'unicorn'
-# gem 'capistrano-rails', group: :development
-# gem 'debugger', group: [:development, :test]
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
@@ -25,6 +24,10 @@ gem 'omniauth-facebook'
 gem 'simple_form'
 gem 'gmaps4rails'
 gem 'lolcommits'
+
+# gem 'unicorn'
+# gem 'capistrano-rails', group: :development
+# gem 'debugger', group: [:development, :test]
 
 group :test do
   gem 'dotenv-rails'
