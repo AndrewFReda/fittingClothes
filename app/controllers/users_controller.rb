@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to user_path(id: @user.id)
     else
+      flash[:alert] = 'Password and confirmation do not match'
       render new_user_path
     end
   end
