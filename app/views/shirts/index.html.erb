@@ -1,11 +1,13 @@
 <h2> View all of your shirts. </h2>
 
-<table>
+<table class="table">
   <% @shirts.each do |shirt| %>
     <tr>
       <td> <%= link_to shirt.name, shirt_path(id: shirt.id) %> </td>
-      <td> <%= link_to "Edit", edit_shirt_path(shirt), class: 'button' %> </td>
-      <td> <%= link_to "Delete", shirt, method: :delete, class: 'button' %> </td>
+      <td> <%= link_to "Edit", edit_shirt_path(shirt), 
+class: 'btn btn-primary' %> </td>
+      <td> <%= link_to "Delete", shirt, method: :delete, 
+class: 'btn btn-danger' %> </td>
     </tr>
   <% end %>
 

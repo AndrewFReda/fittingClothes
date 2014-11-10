@@ -1,6 +1,6 @@
 <h2> View your shirt's measurements. </h2>
 
-<table>
+<table class="table">
   <tr>
     <td>
     Name: <%= @shirt.name %>
@@ -26,8 +26,10 @@
   </tr>
 
   <tr>
-    <td> <%= link_to "Edit", edit_shirt_path(@shirt), class: 'button' %> </td>
-    <td> <%= link_to "Delete", @shirt, method: :delete, class: 'button' %> </td>
+    <td> <%= link_to "Edit", edit_shirt_path(@shirt), 
+class: 'btn btn-primary' %>
+         <%= link_to "Delete", @shirt, method: :delete, 
+class: 'btn btn-danger' %> </td>
   </tr>
 
 </table>
