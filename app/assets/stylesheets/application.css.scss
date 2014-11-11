@@ -18,9 +18,29 @@
 @import "bootstrap";
 
 #container {
+  max-width: 600px;
   margin-top: 100px;
   text-align: center;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
 }
+
+body {
+  background: #eee !important;  
+}
+
+.button-bar {
+  margin-top: 10px;
+}
+
+.button-bar a {
+  margin-bottom: 10px;
+}
+
+.v-center {
+  margin-top: 100px;
+}
+/* FLASH STYLES */
 
 #notice {
   color: green;
@@ -34,18 +54,19 @@
   font-size: 16px;
 }
 
-
-body {
-  background: #eee !important;  
+#shirts-table {
+  padding: 15px 35px 45px;
+  margin: 0 auto;
 }
 
+
+/*  FORM STYLES */
 
 .form-signin {
   max-width: 380px;
   padding: 15px 35px 45px;
   margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1);  
+
 
   .form-signin-heading,
   .checkbox {
@@ -75,24 +96,4 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
-}
-
-
-.field_with_errors {
-  background-color: #ff3333;
-}
-
-.simple_form .error {
-  clear: left;
-  color: black;
-  display: block;
-  margin-left: 120px;
-}
-
-.simple_form .hint {
-  clear: left;
-  margin-left: 120px;
-  color: #555;
-  display: block;
-  font-style: italic;
 }
