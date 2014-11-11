@@ -1,9 +1,10 @@
-<h2> Add a new shirt. </h2>
-
-<%= simple_form_for @shirt do |f| %>
-  <%= f.input :name, input_html: { maxlength: 20 } %>
-  <%= f.input :length %>
-  <%= f.input :chest %>
-  <%= f.input :sleeve %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
+<%= simple_form_for @shirt, html: { class: 'form-signin' } do |f| %>
+  <h2 class='form-signin-heading'>Add a new shirt</h2>
+  <%= f.input_field :name, placeholder: 'Name', class: 'form-control' %>
+  <%= f.input_field :length, placeholder: 'Length', class: 'form-control' %>
+  <%= f.input_field :chest, placeholder: 'Chest', class: 'form-control' %>
+  <%= f.input_field :sleeve, placeholder: 'Sleeve', class: 'form-control last-form-input' %>
+  <%= f.button :submit, class: 'btn btn-large btn-primary btn-block' %>
+  </br>
+  <%= link_to 'Cancel', shirts_path %>
 <% end %>

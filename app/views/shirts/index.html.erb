@@ -1,12 +1,14 @@
-<h2> View all of your shirts. </h2>
+<h2> View all shirts. </h2>
 
-<table class="table">
+<table id='shirts-table' class='table table-condensed'>
   <% @shirts.each do |shirt| %>
     <tr>
-      <td> <%= link_to shirt.name, shirt_path(id: shirt.id) %> </td>
-      <td> <%= link_to "Edit", edit_shirt_path(shirt), 
+      <td> 
+        <h4 class='text-uppercase'> <%= link_to shirt.name, shirt_path(id: shirt.id) %> </h4>
+      </td>
+      <td> <%= link_to 'Edit', edit_shirt_path(shirt), 
 class: 'btn btn-primary' %> </td>
-      <td> <%= link_to "Delete", shirt, method: :delete, 
+      <td> <%= link_to 'Delete', shirt, method: :delete, 
 class: 'btn btn-danger' %> </td>
     </tr>
   <% end %>
@@ -14,7 +16,17 @@ class: 'btn btn-danger' %> </td>
 
   <% if @shirts.empty? %>
     <tr>
-      <em> You have no added any shirts yet! Add a new shirt <%= link_to "here", new_shirt_path %>.</em>
+      <em> No shirt patterns have been added yet. </em>
     </tr>
   <% end %>
+
+    <tr>
+      <td> </td>
+      <td> <em> Add a new shirt <%= link_to 'here', new_shirt_path %>. </em> </td>
+      <td> </td>
+    </tr>
 </table>
+
+<%= link_to 'Sign Out', @user, method: :delete, class: 'btn btn-danger' %>
+</br>
+</br>
