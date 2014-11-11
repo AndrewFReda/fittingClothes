@@ -5,21 +5,30 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
-  <div id='container'>
+  <div id='container' class='container'>
+    <div class='row'>
+      <div class='col-xs-12'>
 
-    <% if notice or alert %>
-      <div id='notice'> <%= notice %> </div>
-      <div id='alert'>  <%= alert  %> </div>
-    <% end %>
+        <% if notice or alert %>
+          <div id='notice'> <%= notice %> </div>
+          <div id='alert'>  <%= alert  %> </div>
+        <% end %>
 
-    </br>
-    </br>
+        </br>
+        </br>
 
-    <%= yield %>
+        <%= yield %>
+
+      </div>
+    </div>
   </div>
 
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </body>
 </html>

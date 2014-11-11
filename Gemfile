@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 gem 'sqlite3'
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -13,10 +13,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-# gem 'unicorn'
-# gem 'capistrano-rails', group: :development
-# gem 'debugger', group: [:development, :test]
+gem "therubyracer"
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
@@ -25,6 +24,10 @@ gem 'omniauth-facebook'
 gem 'simple_form'
 gem 'gmaps4rails'
 gem 'lolcommits'
+
+# gem 'unicorn'
+# gem 'capistrano-rails', group: :development
+# gem 'debugger', group: [:development, :test]
 
 group :test do
   gem 'dotenv-rails'

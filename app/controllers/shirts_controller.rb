@@ -11,10 +11,10 @@ class ShirtsController < ApplicationController
   def create
     @shirt = Shirt.new shirt_params
     if @shirt.save
-      flash[:notice] = "Successfully created shirt."
+      flash[:notice] = 'Successfully created shirt.'
       redirect_to shirts_path
     else
-      flash[:alert] = "Failed to save shirt measurements."
+      flash[:alert] = 'Failed to save shirt measurements.'
       render new_shirt_path
     end
   end
@@ -30,10 +30,10 @@ class ShirtsController < ApplicationController
   def update
     @shirt = Shirt.find params[:id]
     if @shirt.update shirt_params
-      flash[:notice] = "Successfully updated shirt measurements."
+      flash[:notice] = 'Successfully updated shirt measurements.'
       redirect_to shirt_path
     else
-      flash[:alert] = "Failed to update shirt measurements."
+      flash[:alert] = 'Failed to update shirt measurements.'
       render edit_shirt_path
     end
   end
@@ -41,11 +41,21 @@ class ShirtsController < ApplicationController
   def destroy
     @shirt = Shirt.find params[:id]
     if @shirt.destroy
-      flash[:notice] = "Successfully deleted shirt."
+      flash[:notice] = 'Successfully deleted shirt.'
     else
-      flash[:alert] = "Failed to delete shirt."
+      flash[:alert] = 'Failed to delete shirt.'
     end
     redirect_to shirts_path
+  end
+
+
+  def new_compare
+    @shirt = Shirt.new
+  end
+
+  def compare
+    @pattern = Shirt.find params[:compare_id]
+    @shirt  = Shirt.new shirt_params
   end
 
 

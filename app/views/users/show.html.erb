@@ -1,6 +1,13 @@
 <h2> User lobby </h2>
 
-<%= link_to 'Enter Measurements', new_shirt_path, class: 'button' %>
-<%= link_to 'Upload a picture', new_shirt_path, class: 'button' %>
-<%= link_to 'View My Clothing', shirts_path, class: 'button' %>
-<%= button_to 'Sign Out', @user, method: :delete %>
+<div class='row'>
+  <div class='col-md-2 button-bar'>
+    <%= link_to 'Enter Measurements', new_shirt_path, class: 'btn btn-primary' %>
+    <%= link_to 'Upload a picture', new_shirt_path, class: 'btn btn-primary' %>
+    <%= link_to 'View My Clothing', shirts_path, class: 'btn btn-primary' %>
+    <%= link_to 'Sign Out', @user, method: :delete, class: 'btn btn-danger' %>
+  </div>
+  <div class='col-md-10' id='pattern-holder'>
+    <%= image_tag('shirt_pattern.jpg', height: 236, width: 360) %>
+  </div>
+</div>

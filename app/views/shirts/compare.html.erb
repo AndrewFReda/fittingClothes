@@ -1,0 +1,23 @@
+<h2> Results </h2>
+
+<p class='lead'>
+
+  Compared to your shirt <mark><%= "#{@shirt.name}"%></mark>, the <mark><%= "#{@pattern.name}" %></mark> shirt is:
+  <ul class='list-unstyled'>
+      <li> 
+        <strong> <%= compare(@shirt.length, @pattern.length) %> </strong> in length than yours.
+      </li>
+      <li>
+        <strong>  <%= compare(@shirt.chest, @pattern.chest) %> </strong> in the chest than yours.
+      </li>
+      <li>
+        <strong> <%= compare(@shirt.sleeve, @pattern.sleeve) %> </strong> in the sleeve than yours.
+      </li>
+  </ul>
+</p>
+
+<%= link_to 'Save Shirt', url_for(controller: :shirts, action: :create, shirt: @shirt.attributes), method: :post, class: 'btn btn-primary' %>
+<%= link_to 'Cancel', shirts_path, class: 'btn btn-danger' %>
+
+</br>
+</br>
