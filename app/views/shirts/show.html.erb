@@ -1,36 +1,27 @@
 <h2> View your shirt's measurements. </h2>
 
-<table class="table">
-  <tr>
-    <td>
-    Name: <%= @shirt.name %>
-    </td>
-  </tr>
+<div class='row'>
+  <div class='col-sm-4 v-center'>
+    <h4>
+      <ul class='list-unstyled'>
+        <li> Name:   <%= @shirt.name %>     </li>
+        <li> Length: <%= @shirt.length %> </li>
+        <li> Chest:  <%= @shirt.chest %>   </li>
+        <li> Sleeve: <%= @shirt.sleeve %> </li>
+      </ul>
+    </h4>
+  </div>
+  <div class='col-sm-8'>
+    <%= image_tag('shirt-measurements.jpg') %>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-sm-12'>
+    <%= link_to 'Compare', compare_shirt_path(compare_id: @shirt.id), class: 'btn btn-primary' %>
+    <%= link_to 'Edit', edit_shirt_path(@shirt), class: 'btn btn-info' %>
+    <%= link_to 'Delete', @shirt, method: :delete, class: 'btn btn-danger' %> </td>
+  </div>
+</div>
 
-  <tr>
-    <td>
-      Length: <%= @shirt.length %>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Chest: <%= @shirt.chest %>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Sleeve: <%= @shirt.sleeve %>
-    </td>
-  </tr>
-
-  <tr>
-    <td> <%= link_to "Edit", edit_shirt_path(@shirt), 
-class: 'btn btn-primary' %>
-         <%= link_to "Delete", @shirt, method: :delete, 
-class: 'btn btn-danger' %> </td>
-  </tr>
-
-</table>
-
+</br>
+</br>
