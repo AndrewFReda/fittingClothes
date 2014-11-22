@@ -24,6 +24,7 @@ gem 'omniauth-facebook'
 gem 'simple_form'
 gem 'gmaps4rails'
 gem 'lolcommits'
+gem 'chunky_png'
 
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
