@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get   'shirts/upload',              to: 'shirts#upload'
+  get   'shirts/upload',              to: 'shirts#upload', as: 'upload_shirt'
   get   'shirts/compare/:compare_id', to: 'shirts#new_compare'
   post  'shirts/compare/:compare_id', to: 'shirts#compare', as: 'compare_shirt'
 
