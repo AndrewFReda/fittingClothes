@@ -56,6 +56,13 @@ class ShirtsController < ApplicationController
   def compare
     @pattern = Shirt.find params[:compare_id]
     @shirt  = Shirt.new shirt_params
+
+    canvas = ChunkyPNG::Canvas.new(250, 250, ChunkyPNG::Color::WHITE)
+
+    draw_shirt(canvas, @shirt)
+    draw_shirt(canvas, @pattern, ChunkyPNG::Color::BLACK)
+
+    canvas.save("app/assets/images/#{@shirt.name}_#{@pattern.name}.png")
   end
 
 
