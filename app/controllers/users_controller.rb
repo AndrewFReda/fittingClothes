@@ -17,8 +17,12 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to shirts_path
     else
-      flash[:alert] = 'Password and confirmation do not match'
-      render new_user_path
+      if @user.errors[:email].empty?
+        flash[:alert] = 'Password and confirmation do not match'
+      else
+        flash[:alert] = 'User with that email already exists'
+      end
+      redirect_to new_user_path
     end
   end
 
