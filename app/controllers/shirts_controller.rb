@@ -14,7 +14,7 @@ class ShirtsController < ApplicationController
       flash[:notice] = 'Successfully created shirt.'
       redirect_to shirts_path
     else
-      flash[:alert] = 'Failed to save shirt measurements.'
+      flash[:alert]  = 'Failed to save shirt measurements.'
       render new_shirt_path
     end
   end
@@ -33,7 +33,7 @@ class ShirtsController < ApplicationController
       flash[:notice] = 'Successfully updated shirt measurements.'
       redirect_to shirt_path
     else
-      flash[:alert] = 'Failed to update shirt measurements.'
+      flash[:alert]  = 'Failed to update shirt measurements.'
       render edit_shirt_path
     end
   end
@@ -43,7 +43,7 @@ class ShirtsController < ApplicationController
     if @shirt.destroy
       flash[:notice] = 'Successfully deleted shirt.'
     else
-      flash[:alert] = 'Failed to delete shirt.'
+      flash[:alert]  = 'Failed to delete shirt.'
     end
     redirect_to shirts_path
   end
