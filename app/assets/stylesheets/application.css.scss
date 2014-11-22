@@ -36,16 +36,18 @@ body {
 
 /* FLASH STYLES */
 
-#notice {
-  color: green;
+.flash {
+  margin-top: 15px;
   font-weight: bold;
   font-size: 16px;
 }
 
+#notice {
+  color: green;
+}
+
 #alert {
   color: red;
-  font-weight: bold;
-  font-size: 16px;
 }
 
 #shirts-table {
@@ -60,7 +62,6 @@ body {
   max-width: 380px;
   padding: 15px 35px 45px;
   margin: 0 auto;
-
 
   .form-signin-heading,
   .checkbox {
